@@ -1,0 +1,16 @@
+syntax = "proto3"; // Wersja proto
+package chat;
+
+option go_package = "./chat;chat";
+
+service ChatService { // Definiowanie serwisu
+    rpc SayHello(MessageRequest) returns (MessageResponse) {} // Funkcja która zwraca wiadomość
+}
+message MessageRequest {
+    string say = 1;
+}
+
+message MessageResponse {
+    string body = 1;
+}
+

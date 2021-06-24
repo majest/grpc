@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	chat "github.com/tutorialedge/go-grpc-tutorial/chat"
+	"github.com/majest/grpc/handler"
+	"github.com/majest/grpc/chat"
 	"google.golang.org/grpc"
 	"log"
 	"net"
@@ -15,10 +16,8 @@ func main() {
 		log.Fatalf("Err: %v", err)
 	}
 
-	fmt.Println("1") // Linijka do debugu
-
-	s := chat.Server{} // Tworzernie serwera
-
+	s := handler.Server{} // Tworzernie serwera
+	fmt.Println("Starting server")
 	grpcServer := grpc.NewServer() // Tworzenie serwera GRPC ( Jeszcze nie wiem czym się różnią )
 
 	chat.RegisterChatServiceServer(grpcServer, &s) // Rejestrowanie nowego klienta chat serwisu

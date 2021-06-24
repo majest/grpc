@@ -3,7 +3,7 @@ package main
 import (
 	"log" // Odpowiada za logi
 
-	"github.com/tutorialedge/go-grpc-tutorial/chat" // Importuje coś z git'a - nie wiem co
+	"github.com/majest/grpc/chat" // Importuje klienta chat i message
 	"golang.org/x/net/context" // Importuje nam context
 	"google.golang.org/grpc" // Importuje GRPC
 )
@@ -18,8 +18,8 @@ func main () { // Główna pętla programu
 
 	c := chat.NewChatServiceClient(conn) // Tworzy nowego klienta dla serwisu chat (?)
 
-	message := chat.Message { // Ustawiamy zawartość wiadomości
-		Body: "Hello from the client!",
+	message := chat.MessageRequest { // Ustawiamy zawartość wiadomości
+		Say: "Rubber baby burger bumpers.",
 	}
 
 	response, err := c.SayHello(context.Background(), &message) // Używamy funkcji którą wcześniej stworzyliśmy
