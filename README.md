@@ -4,7 +4,7 @@ Pierwszy kod + wskazówki
 <h1> Kod przerżnięty z kursu https://tutorialedge.net/golang/go-grpc-beginners-tutorial/ </h1> </br>
 Coś ogarnąłem, ale chyba nie wystarczająco.  </br> </br>
 
-Teraz wiem jak: kompilować za pomocą protoc, stworzyć prosty serwer, stworzyć prostego kleinta.  </br> </br>
+Teraz wiem jak: kompilować za pomocą protoc, stworzyć prosty serwer, stworzyć prostego klienta.  </br> </br>
 
 Dalej nie wiem: po co mi "github.com/tutorialedge/go-grpc-tutorial/chat" - coś importuję, ale co? Edit 02:25 - importuje chat.go i nie wiem dalczego jak zaimportuje czat to działa a jak zaimportuje własny z gita to nie działa i mam dziwny błąd. </br>
 Czego kontekst bierze "context" / "context.Background()"; </br>
